@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buka</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/080dba293e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="flex justify-between px-20 mx-auto items-center mt-6 text-lg">
+        <div class="flex items-center gap-1 text-3xl">
+            <i class="fas fa-list-ul text-blue-900"></i>
+            <span class="font-bold text-blue-900">buka</span>
+            <span class="text-red-900 font-semibold">todos_</span>
+        </div>
+        <div>
+            <button class="px-4 py-3 bg-red-900 text-white" id="project-modal-btn" type="button">Add Project</button>
+            
+        </div>
+    </header>
+    <!-- Project Modal -->
+    <section id="project-modal"
+        class="hidden fixed z-10 pt-4 left-0 top-0 w-full h-full bg-red-900 text-xl text-white">
+        <div class="mx-16 flex justify-between items-center text-2xl ">
+            <p class="justify-self-center">Add a new project</p>
+            <span id="project-close-icon" class="close text-7xl cursor-pointer">&times;</span>
+        </div>
+        <form action="#" class="flex flex-col content-center max-w-md mx-auto" id="add-project">
+            <label for="project-name" class="text-lg mt-5">Name:</label>
+            <input type="text" id="project-name" name="project-name" placeholder="Project Name"
+                class="p-2 rounded mt-1 text-black cursor-pointer" required>
+
+            <input type="submit" value="Add" class="mt-5 p-2 bg-black text-white">
+        </form>
+    </section>
+    <!-- Todo Modal -->
+    <section id="todo-modal" class="hidden fixed z-10 pt-4 left-0 top-0 w-full h-full bg-blue-900 text-xl text-white">
+        <div class="mx-16 flex justify-between items-center text-2xl ">
+            <p class="justify-self-center">Add a new todo</p>
+            <span id="todo-close-icon" class="close text-7xl cursor-pointer">&times;</span>
+        </div>
+        <form action="#" class="flex flex-col content-center max-w-md mx-auto" id="add-todo">
+            <label for="todo-title" class="text-lg mt-5">Title:</label>
+            <input type="text" id="todo-title" name="todo-title" placeholder="Todo title"
+                class="p-2 rounded mt-1 text-black" required>
+
+            <label for="todo-desc" class="text-lg mt-5">Description:</label>
+            <textarea name="todo-desc" id="todo-desc" cols="30" rows="3" class="p-2 rounded mt-1 text-black"
+                required></textarea>
+
+            <label for="todo-date" class="text-lg mt-5">Duedate:</label>
+            <input type="date" id="todo-date" class="p-2 rounded mt-1 text-black" required>
+
+            <label for="priority" class="text-lg mt-5">priority?</label>
+            <select name="priority" id="priority" class="p-2 text-black" required>
+                <option value="Normal">Normal</option>
+                <option value="High">High</option>
+                <option value="Low">Low</option>
+            </select>
+
+            <input type="submit" value="Add" class="mt-5 p-2 bg-black text-white  cursor-pointer">
+        </form>
+    </section>
+    <!-- Edit Todo Modal -->
+    <section id="edit-modal" class="hidden fixed z-10 pt-4 left-0 top-0 w-full h-full bg-blue-900 text-xl text-white">
+        <div class="mx-16 flex justify-between items-center text-2xl ">
+            <p class="justify-self-center">Edit todo</p>
+            <span id="edit-close-icon" class="close text-7xl cursor-pointer">&times;</span>
+        </div>
+        <form action="#" class="flex flex-col content-center max-w-md mx-auto" id="edit-todo-form">
+            <label for="edit-title" class="text-lg mt-5">Title:</label>
+            <input type="text" id="edit-title" name="edit-title" placeholder="edit title"
+                class="p-2 rounded mt-1 text-black" required>
+
+            <label for="edit-desc" class="text-lg mt-5">Description:</label>
+            <textarea name="edit-desc" id="edit-desc" cols="30" rows="3" class="p-2 rounded mt-1 text-black"
+                required></textarea>
+
+            <label for="edit-date" class="text-lg mt-5">Duedate:</label>
+            <input type="date" id="edit-date" class="p-2 rounded mt-1 text-black" required>
+
+            <label for="edit-priority" class="text-lg mt-5">priority?</label>
+            <select name="priority" id="edit-priority" class="p-2 text-black" required>
+                <option value="Normal">Normal</option>
+                <option value="High">High</option>
+                <option value="Low">Low</option>
+            </select>
+
+            <input type="submit" value="Edit Todo" class="mt-5 p-2 bg-black text-white  cursor-pointer" id="x">
+        </form>
+    </section>
+    <div id="content" class="grid grid-cols-2 auto-rows-auto px-20 mx-auto mt-10 gap-4"></div>
+    <script src="main.js"></script>
+</body>
+
+</html>

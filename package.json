@@ -1,0 +1,32 @@
+{
+  "name": "buka",
+  "version": "1.0.0",
+  "description": "Simple todo app build with JavaScript and webpack.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "webpack": "^5.47.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omar-labana/buka.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omar-labana/buka/issues"
+  },
+  "homepage": "https://github.com/omar-labana/buka#readme"
+}
