@@ -9,8 +9,8 @@ if (localStorage.projects) {
 } else {
     console.log(localStorage.projects);
     const defaultProject = new Project('default project')
-    const defaultTodoOne = new Todo('Cut chicken', 'do something', '2021-08-02', 'High')
-    const defaultTodoTwo = new Todo('boil water', 'do something', '2021-08-03', 'High')
+    const defaultTodoOne = new Todo('Say Hi to Dad', 'Make breakfast and comute', '2021-08-02', 'High')
+    const defaultTodoTwo = new Todo('Buy needed food', 'Go to fish market and buy some fish', '2021-08-03', 'Normal')
 
     defaultProject.todos.push(defaultTodoOne)
     defaultProject.todos.push(defaultTodoTwo)
